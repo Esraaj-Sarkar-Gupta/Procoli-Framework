@@ -58,5 +58,5 @@ python procoli_workflow.py config.yaml
 
 ### References
 Procoli: Profiles of cosmological likelihoods - Karwal et. al.
-        https://github.com/tkarwal/procoli
-        https://arxiv.org/abs/2401.14225
+https://github.com/tkarwal/procoli
+https://arxiv.org/abs/2401.14225
