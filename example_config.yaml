@@ -1,0 +1,41 @@
+# Esraaj's default configuration
+# 15th Feb, 2026
+
+env:
+  montepython_dir: /home/esraaj/cosmology/cosmological_workflow/montepython_public-3.6/montepython
+
+run:
+  # Path to the directory with the MontePython chains
+  chains_directory : /home/esraaj/cosmology/cosmological_workflow/montepython_public-3.6/chains/test_run
+
+  # Name of the chains files (example.bestfit, example.convmat)
+  chains_name : test_run
+
+  # Parameter to profile (this much match your MontePython parameter names)
+  profile_parameter: H0
+
+# ----- Procoli Parameters ----- #
+profile:
+  # Parameter Search Limits
+  profile_max: 75.0
+  profile_min: 65.0
+
+  # Number of Processes (Parallelized with mpirun)
+  processes: 10
+
+  # Profile Increments
+  profile_increments: 1
+
+# -- Global Minimum Optimization -- #
+global_optimization:
+  jump_factors: [1, 0.8, 0.5, 0.2, 0.1, 0.05]
+  temperatures : [0.3333, 0.25, 0.2, 0.1, 0.005, 0.001]
+
+  min_steps: 2000
+
+# -- Profile Ridge Exploration -- #
+mapping:
+  jump_factors: [0.15, 0.1, 0.05]
+  temperatures: [0.1, 0.005, 0.001]
+
+  min_steps: 100
